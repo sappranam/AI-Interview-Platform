@@ -1,0 +1,15 @@
+Based on John Doe's resume, here are 5 personalized technical interview questions:
+
+1. **Regarding your work on the AskQ portal at Carelon Global Solutions, you mention a cost reduction of $2.78 million due to addressing issues. Can you describe a specific technical challenge you faced during the development of AskQ, how you approached solving it, and the measurable impact of your solution on that cost reduction?  Focus on the technical aspects, not just the business impact.**  (This probes problem-solving skills, technical depth, and the ability to quantify impact.  It moves beyond the resume bullet point to get specifics).
+
+2. **Your resume lists both front-end and back-end development experience.  Your AskQ work involved both. Can you walk me through the architecture of the Jira creation tool you developed, highlighting the interaction between the React front-end and the back-end (presumably the REST API you mention elsewhere)?  What were some design considerations you made to ensure efficient communication and data handling between these two parts?** (This tests understanding of full-stack development, system design, and communication between front-end and back-end components).
+
+3. **Your plant disease detection project utilized machine learning. Can you describe the specific ML algorithm you employed and why you chose it?  What were some challenges you encountered in integrating the ML model with your React front-end, and how did you overcome them?** (This assesses knowledge of ML, practical application, and the ability to troubleshoot integration issues).
+
+4. **You mention using WebAPI and SQL to access the Blue Square Management System.  Can you describe a scenario where you had to handle a complex database query or optimize data retrieval for performance reasons?  What techniques did you use to ensure efficient and accurate data access?** (This explores database management skills, performance optimization, and problem-solving in a back-end context).
+
+
+5. **Your entertainment web application incorporated a streaming feature.  What were some of the technical challenges you faced in implementing this feature, such as handling video playback, managing bandwidth, or scaling for multiple users? How did you address these challenges?** (This targets practical experience in a complex project involving video streaming, a non-trivial task with numerous potential scaling and performance hurdles).
+
+
+These questions are designed to go beyond surface-level understanding and delve into John Doe's technical expertise and problem-solving abilities in specific contexts demonstrated by his resume and projects.  They encourage detailed explanations and demonstrate his ability to communicate technical details effectively.

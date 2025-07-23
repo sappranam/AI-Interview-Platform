@@ -1,0 +1,70 @@
+import os
+import sounddevice as sd
+from scipy.io.wavfile import write
+import speech_recognition as sr
+import time
+
+# Load interview questions from file
+with open("interview_questions.txt", "r", encoding="utf-8") as f:
+    questions = [line.strip() for line in f if line.strip().startswith("1.") or line.strip()[0].isdigit()]
+
+print("\n🎤 Welcome to the AI Interview Session!\n")
+
+answers = []
+
+# Function to record audio until Enter is pressed again
+def record_audio(filename, fs=44100):
+    print("➡️ Press Enter to start recording...")
+    input()
+    print("🎙️ Recording... Press Enter to stop.")
+
+    # Start recording
+    recording = []
+    is_recording = True
+
+    def callback(indata, frames, time, status):
+        if is_recording:
+            recording.append(indata.copy())
+
+    with sd.InputStream(samplerate=fs, channels=1, callback=callback):
+        try:
+            input()  # Wait until Enter is pressed again
+        except KeyboardInterrupt:
+            pass
+
+    # Combine all recorded frames
+    audio_data = b''.join([frame.tobytes() for frame in recording])
+    import numpy as np
+    audio_np = np.frombuffer(audio_data, dtype='int16')
+    write(filename, fs, audio_np)
+    print("✅ Recording saved.\n")
+
+# Function to transcribe audio
+def transcribe_audio(filename):
+    recognizer = sr.Recognizer()
+    try:
+        with sr.AudioFile(filename) as source:
+            audio = recognizer.record(source)
+            text = recognizer.recognize_google(audio)
+            return text
+    except Exception as e:
+        return f"(Transcription failed: {str(e)})"
+
+# Main interview loop
+for idx, question in enumerate(questions, 1):
+    print(f"\n❓ Question {idx}:\n{question}")
+    audio_filename = f"answer_{idx}.wav"
+
+    record_audio(audio_filename)
+
+    print("📝 Transcribing...\n")
+    answer = transcribe_audio(audio_filename)
+    print(f"🗣️ Your Answer: {answer}\n")
+    answers.append((question, answer))
+
+# Save answers to file
+with open("answers.txt", "w", encoding="utf-8") as f:
+    for i, (q, a) in enumerate(answers, 1):
+        f.write(f"Q{i}: {q}\nA{i}: {a}\n\n")
+
+print("✅ All answers saved to answers.txt")
