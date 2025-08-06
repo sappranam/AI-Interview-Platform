@@ -1,0 +1,19 @@
+Q1 Evaluation:
+Score: 2/10
+Feedback: The answer is largely incomprehensible and doesn't address the question.  It mentions several technologies (Prism, MySQL, Next.js, TypeScript) but fails to explain how they relate to a chatbot or Google Gemini API integration.  There's no description of the integration process, challenges faced, or solutions implemented.  The answer appears to be a jumbled recollection of technologies used in a project, without any coherent explanation of how they work together, especially concerning the requested Gemini API integration.  The reference to "Chennai API" is likely a mistake and shows a lack of understanding of the question.  The answer needs to be completely restructured to clearly articulate the experience with the Gemini API within the chatbot project.
+
+Q2 Evaluation:
+Score: 1/10
+Feedback: The answer "used" is completely insufficient.  A good answer would detail the chosen authentication method (e.g., OAuth 2.0, JWT, basic auth), explaining its security implications and trade-offs.  It would also describe the data storage solution (e.g., SQL database, NoSQL database, cloud storage), justifying the choice based on data structure, scalability needs, and cost considerations.  The candidate needs to demonstrate a strong understanding of security best practices and database design principles.  The response provides no information whatsoever about the design choices made.
+
+Q3 Evaluation:
+Score: 2/10
+Feedback: The answer is poorly structured, grammatically incorrect, and lacks detail.  It mentions funding ("money") and Raspberry Pi access as challenges, but doesn't elaborate on *why* these were challenges or what specific problems were encountered.  The phrase "other modules required" is vague.  A better answer would describe specific technical hurdles (e.g., limited processing power, memory constraints, difficulty integrating libraries, power management issues), how these were overcome (or attempted to be overcome), and the lessons learned.  The candidate needs to significantly improve their communication skills to effectively articulate technical challenges.
+
+Q4 Evaluation:
+Score: 2/10
+Feedback: The answer is incomprehensible and fails to address the question.  It mentions user-friendly specs, object detection, text-to-speech, and a speaker, but lacks any discussion of reliability (e.g., error handling, robustness to variations in lighting/object appearance) or portability (e.g., hardware choices, software dependencies, platform compatibility).  The grammar and spelling are severely deficient, making the response very difficult to understand.  The candidate needs to significantly improve their communication skills and demonstrate a deeper understanding of software engineering principles related to reliability and portability.
+
+Q5 Evaluation:
+Score: 3/10
+Feedback: The answer is poorly structured and contains grammatical errors and unclear phrasing.  It lacks specific examples of projects and doesn't effectively compare and contrast the languages.  The mention of "plastic material" is nonsensical in this context. The answer should provide concrete examples of how each language was used in different projects, highlighting strengths and weaknesses for each in relation to the project's goals.  It should also articulate a clearer understanding of OOP concepts and their application in C++.  More focused and precise language is needed.

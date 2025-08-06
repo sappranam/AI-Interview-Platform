@@ -1,6 +1,7 @@
 import fitz  # PyMuPDF
 import re
 import json
+import sys
 
 def extract_text(pdf_path):
     text = ""
@@ -76,7 +77,6 @@ def extract_projects(text):
     capture = False
     current_project = ""
 
-    # Normalize lines to remove invisible Unicode characters
     lines = [line.strip().replace('\u2022', '').replace('\xa0', ' ') for line in lines]
 
     for line in lines:
@@ -85,7 +85,6 @@ def extract_projects(text):
             continue
 
         if capture:
-            # Stop if next section starts
             if any(kw in line.upper() for kw in ["COURSE", "WORKSHOP", "ACHIEVEMENT", "ACTIVITIES", "CERTIFICATION"]):
                 if current_project:
                     projects.append(current_project.strip())
@@ -101,7 +100,6 @@ def extract_projects(text):
     if current_project:
         projects.append(current_project.strip())
 
-    # Post-filter: remove duplicates and invalid lines
     clean_projects = []
     for p in projects:
         if (
@@ -112,7 +110,6 @@ def extract_projects(text):
             clean_projects.append(p)
 
     return clean_projects
-
 
 def extract_experience(text):
     lines = text.split('\n')
@@ -138,10 +135,13 @@ def parse_resume(pdf_path):
     }
 
 if __name__ == "__main__":
-    pdf_path = "sample_resume_1.pdf"  # Make sure this file exists
+    if len(sys.argv) != 2:
+        print("Usage: python parser.py <path_to_resume.pdf>")
+        sys.exit(1)
+
+    pdf_path = sys.argv[1]
     parsed_data = parse_resume(pdf_path)
 
-    # Save structured data to JSON
     with open("parsed_resume.json", "w", encoding='utf-8') as f:
         json.dump(parsed_data, f, indent=4)
 

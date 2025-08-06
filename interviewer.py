@@ -16,8 +16,14 @@ with open("parsed_resume.json", "r", encoding="utf-8") as f:
 
 # Build prompt from resume content
 prompt = f"""
-You are a technical interviewer. Ask personalized interview questions based on the candidate's resume:
+You are a technical interviewer.
 
+Based on the candidate's resume below, generate exactly 5 personalized technical interview questions.
+
+Do NOT include explanations, reasoning, comments, or assessment criteria.
+Just list the questions numbered 1 to 5.
+
+Resume:
 Name: {resume_data.get("name")}
 Email: {resume_data.get("email")}
 Phone: {resume_data.get("phone")}
@@ -27,9 +33,8 @@ Education: {', '.join(resume_data.get("education", []))}
 Skills: {', '.join(resume_data.get("skills", []))}
 Experience: {', '.join(resume_data.get("experience", []))}
 Projects: {', '.join(resume_data.get("projects", []))}
-
-Generate 5 personalized technical interview questions based on this profile.
 """
+
 
 # Generate interview questions
 response = model.generate_content(prompt)
@@ -40,4 +45,4 @@ print(response.text.strip())
 with open("interview_questions.txt", "w", encoding="utf-8") as f:
     f.write(response.text.strip())
 
-print("✅ Interview questions saved to interview_questions.txt")
+print(" Interview questions saved to interview_questions.txt")

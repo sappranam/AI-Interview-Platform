@@ -1,0 +1,18 @@
+ AI Interview Transcript
+========================================
+
+Q1: 1.  Describe your experience integrating the Google Gemini API into your full-stack chatbot project.
+A1: I have used the Chennai API for your building a chatbot using prism for database along with my SQL which included next task for authentication and next JS and typescript for the front end part and consists of a login enters into a dashboard including chart where the user
+
+Q2: 2.  Explain your design choices for handling user authentication and data storage in your chatbot application.
+A2: used
+
+Q3: 3.  Discuss the challenges you faced in developing the offline functionality of your AI-powered assistive device.
+A3: which is the issues including the money and which was the Raspberry Pi access to getting access to the difficult and other modules required for offline functionality of the
+
+Q4: 4.  How did you ensure the reliability and portability of your AI-powered assistive device, given its reliance on real-time object recognition?
+A4: user friendly specs for as an object which detect the objects and converts the text to speech eating also included a speaker with through which the user could hear as the line could not
+
+Q5: 5.  Compare and contrast your experiences using C++ and Python in your projects.
+A5: C plus plus was comparatively easy for DSA purposes and for the designing the web pages for integrating backend with front end Python using plastic material was better option and C plus plus is usually better consists of oops concepts and protecting the data
+
